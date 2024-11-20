@@ -1,0 +1,37 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Modal Pomodoro -->
+<div class="modal fade" id="pomodoroModal" tabindex="-1" aria-labelledby="pomodoroModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <iframe id="pomodoroIframe" src="https://app.flocus.com/" style="border:0; width:100%; height:500px;" frameborder="0" allowfullscreen="true"></iframe>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    // Gestion des clics dans l'iframe pour empêcher la fermeture du modal
+    document.getElementById('pomodoroIframe').addEventListener('click', function(event) {
+        // Stoppe la propagation de l'événement de clic
+        event.stopPropagation();
+    });
+</script>

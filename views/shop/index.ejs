@@ -1,14 +1,16 @@
 <%- include('../Composants/head.ejs') %>
 </head>
 
-<body class="bg-dark text-white">
-    <div class="container-fluid py-3">
-        <div class="row">
-          <%- include('../Composants/Elements/row.ejs') %>
-        </div>
+<body class="bg-light">
+  <%- include('../includes/BarreNavigation.ejs') %>
 
-        <!-- Barre Inférieure : Inventaire et Raccourcis -->
-        <%- include('../Composants/Elements/DecisionBar.ejs') %>
-    </div>
+  <div class="container-fluid py-3">
+      <div class="row">
+        <%- include('../Composants/Elements/row.ejs') %>
+      </div>
+
+      <!-- Barre Inférieure : Inventaire et Raccourcis -->
+      <%- include('../Composants/Elements/DecisionBar.ejs') %>
+  </div>
 
 <%- include('../includes/end.ejs') %>
