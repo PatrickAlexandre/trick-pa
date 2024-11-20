@@ -1,0 +1,64 @@
+<div class="card border-0 shadow-sm">
+    <div class="card-header text-center bg-light border-bottom">
+        <h5 class="m-0"><i class="fas fa-comment text-muted"></i> Chat</h5>
+    </div>
+    <div class="card-body p-3">
+        <!-- Navigation des onglets -->
+        <ul class="nav nav-tabs border-0 mb-3" id="chatTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="productivity-tab" data-bs-toggle="tab" data-bs-target="#productivity" type="button" role="tab" aria-controls="productivity" aria-selected="true">
+                    Productivité
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="general-tab" data-bs-toggle="tab" data-bs-target="#general" type="button" role="tab" aria-controls="general" aria-selected="false">
+                    Général
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="webdev-tab" data-bs-toggle="tab" data-bs-target="#webdev" type="button" role="tab" aria-controls="webdev" aria-selected="false">
+                    Développement Web
+                </button>
+            </li>
+        </ul>
+
+        <!-- Contenu des onglets -->
+        <div class="tab-content" id="chatTabsContent">
+            <!-- Productivité -->
+            <div class="tab-pane fade show active" id="productivity" role="tabpanel" aria-labelledby="productivity-tab">
+                <a href="https://openai.com/chatgpt" target="_blank" class="d-block mb-2 text-decoration-none link-secondary rounded p-2">
+                    <strong>[ChatGPT]</strong> : "Votre assistant AI pour booster la productivité."
+                </a>
+                <a href="https://whimsical.com/" target="_blank" class="d-block mb-2 text-decoration-none link-secondary rounded p-2">
+                    <strong>[Whimsical Diagrams]</strong> : "Organisez visuellement vos idées."
+                </a>
+            </div>
+
+            <!-- Général -->
+            <div class="tab-pane fade" id="general" role="tabpanel" aria-labelledby="general-tab">
+                <a href="https://openai.com/dall-e-2/" target="_blank" class="d-block mb-2 text-decoration-none link-secondary rounded p-2">
+                    <strong>[DALL·E]</strong> : "Créez des images à partir de vos idées."
+                </a>
+                <a href="https://souschef.com/" target="_blank" class="d-block mb-2 text-decoration-none link-secondary rounded p-2">
+                    <strong>[Sous-Chef]</strong> : "Votre guide en cuisine."
+                </a>
+            </div>
+
+            <!-- Développement Web -->
+            <div class="tab-pane fade" id="webdev" role="tabpanel" aria-labelledby="webdev-tab">
+                <a href="https://github.com/features/copilot" target="_blank" class="d-block mb-2 text-decoration-none link-secondary rounded p-2">
+                    <strong>[Code Copilot]</strong> : "Optimisez votre code avec un copilote AI."
+                </a>
+                <a href="https://github.com/features/copilot" target="_blank" class="d-block mb-2 text-decoration-none link-secondary rounded p-2">
+                    <strong>[Screenshot-to-Code GPT]</strong> : "Transformez des captures en code instantanément."
+                </a>
+            </div>
+        </div>
+
+        <!-- Champ de saisie de message -->
+        <div class="input-group mt-3">
+            <input type="text" class="form-control" placeholder="Écrivez un message...">
+            <button class="btn btn-outline-primary"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+</div>

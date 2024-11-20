@@ -1,0 +1,41 @@
+            <!-- Bras Gauche : Coeur -->
+            <div class="col-md-4">
+                <%- include('./row/Notion.ejs') %>
+            </div>
+
+            <!-- Ressenti Central : Sens -->
+            <div class="col-md-4">
+                <%- include('./row/RealiteAugmentee.ejs') %>
+
+                <div class="card bg-secondary text-white">
+                    <div class="card-header text-center">
+                        <h5><i class="fas fa-tasks"></i> Quêtes Actives</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-secondary text-white">✔ Trouver l'objet mystérieux</li>
+                            <li class="list-group-item bg-secondary text-white">⏳ Parler avec l'agent secret</li>
+                            <li class="list-group-item bg-secondary text-white">❌ Neutraliser la menace</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Colonne Droite : Actions -->
+            <div class="col-md-4">
+                <div class="card bg-secondary text-white mb-3">
+                    <div class="card-header text-center">
+                        <h5><i class="fas fa-bolt"></i> Actions Rapides</h5>
+                    </div>
+                    <div class="card-body d-grid gap-2">
+                        <button class="btn btn-primary"><i class="fas fa-camera"></i> Scanner un Objet</button>
+                        <button class="btn btn-primary"><i class="fas fa-map-marker-alt"></i> Marquer un Lieu</button>
+                        <button class="btn btn-primary"><i class="fas fa-wifi"></i> Synchroniser les Données</button>
+                        <button class="btn btn-danger"><i class="fas fa-power-off"></i> Déconnecter</button>
+                    </div>
+                </div>
+
+                <%- include('./row/Chat.ejs') %>
+
+
+            </div>

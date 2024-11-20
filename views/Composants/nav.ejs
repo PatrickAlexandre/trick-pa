@@ -1,0 +1,36 @@
+  <!-- Offcanvas Navigation -->
+  <div>
+    <!-- Bouton Burger -->
+    <button class="btn btn-primary m-3 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuOffcanvas"
+      aria-controls="menuOffcanvas">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Offcanvas -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="menuOffcanvas" aria-labelledby="menuOffcanvasLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="menuOffcanvasLabel">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
+      </div>
+      <div class="offcanvas-body p-0">
+        <ul class="nav flex-column bg-dark text-white h-100">
+          <li class="nav-item">
+            <a href="#section1" class="nav-link text-white p-3"><i class="fas fa-chart-pie me-2"></i>Cartes de Performances</a>
+          </li>
+          <li class="nav-item">
+            <a href="#dataSection" class="nav-link text-white p-3"><i class="fas fa-database me-2"></i>Données</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-white p-3" data-bs-toggle="modal" data-bs-target="#profilModal"><i class="fas fa-user me-2"></i>Mon Profil</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sidebar (Version Réduite pour PC) -->
+  <div class="d-none d-lg-flex flex-column bg-dark text-white h-100 position-fixed" style="width: 64px;">
+    <a href="#section1" class="nav-link text-white text-center py-3"><i class="fas fa-chart-pie"></i></a>
+    <a href="#dataSection" class="nav-link text-white text-center py-3"><i class="fas fa-database"></i></a>
+    <a href="#" class="nav-link text-white text-center py-3" data-bs-toggle="modal" data-bs-target="#profilModal"><i class="fas fa-user"></i></a>
+  </div>

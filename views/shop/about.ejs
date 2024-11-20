@@ -1,16 +1,18 @@
-<%- include('../includes/head.ejs') %>
+<%- include('../Composants/head.ejs') %>
   </head>
 
-  <body>
-    <%- include('../includes/navigation.ejs') %>
-    <main>
-      <div class="uk-section uk-section-default uk-text-center">
-        <div class="uk-container uk-container-small">
-          <article class="uk-article">
-            <h1 class="uk-article-title ui-card-title">About Us</h1>
-            <p class="uk-text-lead">This is W3Schools Spaces webshop template</p>
-          </article>
-        </div>
-      </div>
-    </main>
+<body class="bg-light text-dark">
+
+  <!-- Offcanvas Navigation -->
+  <!-- Sidebar (Version Réduite pour PC) -->
+  <%- include('../Composants/nav.ejs') %>
+
+  <main>
+    <!-- Contenu Principal -->
+    <%- include('../Composants/Section.ejs') %>
+  </main>
+
+  <!-- Modal Mon Profil -->
+  <%- include('../Composants/Profil.ejs') %>
+
     <%- include('../includes/end.ejs') %>
