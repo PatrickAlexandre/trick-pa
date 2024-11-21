@@ -1,0 +1,233 @@
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#"><i class="fas fa-dragon"></i> Warcraft UX</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Quests</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Inventory</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Skills</a></li>
+        </ul>
+        <div class="d-flex align-items-center">
+          <i class="fas fa-coins text-warning me-2"></i> 125 Gold
+          <i class="fas fa-gem text-primary ms-4 me-2"></i> 50 Gems
+          <button class="btn btn-outline-warning ms-3"><i class="fas fa-cog"></i> Settings</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container-fluid mt-4">
+    <div class="row">
+      <!-- Left Panel: WoW Character Panel -->
+      <div class="col-md-2">
+        <div class="card bg-dark text-white shadow-sm border-0">
+          <div class="card-body text-center">
+            <!-- Character Avatar -->
+            <div class="d-flex justify-content-center mb-4">
+              <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2RvaXBlbHV6OW9xNjY4aGNtOXMwdXFsaGt2Y3pobzZ2aDNheXR3MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/UqZEgAknyIbfnUSqEv/giphy.gif" 
+                  alt="Character Avatar" 
+                  class="rounded-circle border border-warning" 
+                  style="width: 150px; height: 150px;">
+            </div>
+
+            <!-- Health Bar -->
+            <div class="mb-3">
+              <p class="mb-1 text-uppercase fw-bold text-warning">Health</p>
+              <div class="progress" style="height: 20px; border-radius: 10px;">
+                <div class="progress-bar bg-success" 
+                    role="progressbar" 
+                    style="width: 80%;" 
+                    aria-valuenow="80" 
+                    aria-valuemin="0" 
+                    aria-valuemax="100">
+                  80%
+                </div>
+              </div>
+            </div>
+
+            <!-- Mana Bar -->
+            <div class="mb-3">
+              <p class="mb-1 text-uppercase fw-bold text-primary">Mana</p>
+              <div class="progress" style="height: 20px; border-radius: 10px;">
+                <div class="progress-bar bg-primary" 
+                    role="progressbar" 
+                    style="width: 60%;" 
+                    aria-valuenow="60" 
+                    aria-valuemin="0" 
+                    aria-valuemax="100">
+                  60%
+                </div>
+              </div>
+            </div>
+
+            <!-- Stamina Bar -->
+            <div>
+              <p class="mb-1 text-uppercase fw-bold text-danger">Stamina</p>
+              <div class="progress" style="height: 20px; border-radius: 10px;">
+                <div class="progress-bar bg-danger" 
+                    role="progressbar" 
+                    style="width: 90%;" 
+                    aria-valuenow="90" 
+                    aria-valuemin="0" 
+                    aria-valuemax="100">
+                  90%
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Center Panel AI: Quick Décisions -->
+      <div class="col-md-2">
+        <div class="card mb-3">
+          <div class="card-header text-center">
+            <h5><i class="fas fa-bolt me-2"></i>Quick Actions</h5>
+          </div>
+          <div class="card-body">
+            <button class="btn action-btn w-100 mb-2"><i class="fas fa-sword"></i> Attack</button>
+            <button class="btn action-btn w-100 mb-2"><i class="fas fa-shield-alt"></i> Defend</button>
+            <button class="btn action-btn w-100 mb-2"><i class="fas fa-magic"></i> Cast Spell</button>
+            <button class="btn action-btn w-100"><i class="fas fa-running"></i> Flee</button>
+          </div>
+        </div>
+      </div>
+      <!-- Center Panel AI: Fast Answers -->
+      <div class="col-md-5">  <hr>
+      </div>
+
+      <!-- Right Panel: Map and Quests -->
+      <div class="col-md-3">
+
+        <!-- Vues Notion Productivité avec Bootstrap Tabs -->
+        <div class="card mb-3">
+        <div class="card-body">
+            <!-- Navigation Tabs -->
+            <ul class="nav nav-tabs" id="notionTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="table-tab" data-bs-toggle="tab" data-bs-target="#table" type="button" role="tab" aria-controls="table" aria-selected="true">
+                <i class="fas fa-table"></i> Table
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="kanban-tab" data-bs-toggle="tab" data-bs-target="#kanban" type="button" role="tab" aria-controls="kanban" aria-selected="false">
+                <i class="fas fa-columns"></i> Tableau Kanban
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="calendar-tab" data-bs-toggle="tab" data-bs-target="#calendar" type="button" role="tab" aria-controls="calendar" aria-selected="false">
+                <i class="fas fa-calendar-alt"></i> Calendrier
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="timeline-tab" data-bs-toggle="tab" data-bs-target="#timeline" type="button" role="tab" aria-controls="timeline" aria-selected="false">
+                <i class="fas fa-stream"></i> Chronologie
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="list-tab" data-bs-toggle="tab" data-bs-target="#list" type="button" role="tab" aria-controls="list" aria-selected="false">
+                <i class="fas fa-list"></i> Liste
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="gallery-tab" data-bs-toggle="tab" data-bs-target="#gallery" type="button" role="tab" aria-controls="gallery" aria-selected="false">
+                <i class="fas fa-th-large"></i> Galerie
+                </button>
+            </li>
+            </ul>
+
+            <!-- Tab Content -->
+            <div class="tab-content mt-3" id="notionTabsContent">
+            <div class="tab-pane fade show active" id="table" role="tabpanel" aria-labelledby="table-tab">
+                <!-- Contenu de la Vue Table -->
+                <h5>Vue Table</h5>
+            </div>
+            <div class="tab-pane fade" id="kanban" role="tabpanel" aria-labelledby="kanban-tab">
+                <!-- Contenu de la Vue Tableau Kanban -->
+                <h5>Vue Grille Cartes</h5>
+                <iframe src="https://www.google.com" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="tab-pane fade" id="calendar" role="tabpanel" aria-labelledby="calendar-tab">
+                <!-- Contenu de la Vue Calendrier -->
+                <h5>Vue Calendrier</h5>
+                <iframe src="https://www.google.com" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="tab-pane fade" id="timeline" role="tabpanel" aria-labelledby="timeline-tab">
+                <!-- Contenu de la Vue Chronologie -->
+                <h5>Vue Chronologie</h5>
+                <iframe src="https://www.google.com" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="tab-pane fade" id="list" role="tabpanel" aria-labelledby="list-tab">
+                <!-- Contenu de la Vue Liste -->
+                <h5>Vue Liste</h5>
+                <iframe src="https://www.google.com" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="tab-pane fade" id="gallery" role="tabpanel" aria-labelledby="gallery-tab">
+                <!-- Contenu de la Vue Galerie -->
+                <h5>Vue Galerie</h5>
+                <iframe src="https://www.google.com" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Quests -->
+        <div class="card mt-3">
+          <div class="card-header bg-warning text-dark" data-bs-toggle="collapse" data-bs-target="#questCollapse" style="cursor: pointer;">
+            <h5 class="mb-0"><i class="fas fa-book-dead me-2"></i>Quêtes</h5>
+          </div>
+          <div id="questCollapse" class="collapse show">
+            <div class="card-body">
+              <ul class="list-group">
+                <li class="list-group-item bg-dark text-white">
+                  <i class="fas fa-chevron-right text-warning"></i> Retrieve the Lost Artifact from the Ancient Temple.
+                </li>
+                <li class="list-group-item bg-dark text-white">
+                  <i class="fas fa-chevron-right text-warning"></i> Defeat the Bandit Leader in the Forest.
+                </li>
+                <li class="list-group-item bg-dark text-white">
+                  <i class="fas fa-chevron-right text-warning"></i> Collect 10 Healing Herbs for the Healer.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quêtes Quotidiennes -->
+        <div class="card mt-3">
+          <div class="card-header bg-info text-dark" data-bs-toggle="collapse" data-bs-target="#dailyQuestCollapse" style="cursor: pointer;">
+            <h5 class="mb-0"><i class="fas fa-hourglass-half me-2"></i>Tâches Quotidiennes</h5>
+          </div>
+          <div id="dailyQuestCollapse" class="collapse show">
+            <div class="card-body">
+              <ul class="list-group">
+                <li class="list-group-item bg-dark text-white">
+                  <i class="fas fa-chevron-right text-info"></i> Harvest 20 Iron Ore from the Mines.
+                </li>
+                <li class="list-group-item bg-dark text-white">
+                  <i class="fas fa-chevron-right text-info"></i> Deliver the Medicine to the Village Elder.
+                </li>
+                <li class="list-group-item bg-dark text-white">
+                  <i class="fas fa-chevron-right text-info"></i> Complete 3 Arena Battles.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer text-center py-3 mt-4">
+    <p class="mb-0">© 2025 All Rights Reserved.</p>
+  </footer>
+
