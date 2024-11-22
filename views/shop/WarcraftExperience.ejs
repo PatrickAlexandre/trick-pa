@@ -8,9 +8,9 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav me-auto">
           <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Quests</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Inventory</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Smart</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Assistant</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Skills | Formations</a></li>
         </ul>
         <div class="d-flex align-items-center">
           <i class="fas fa-coins text-warning me-2"></i> 125 Gold
@@ -26,6 +26,7 @@
     <div class="row">
       <!-- Left Panel: WoW Character Panel -->
       <div class="col-md-2">
+
         <div class="card bg-dark text-white shadow-sm border-0">
           <div class="card-body text-center">
             <!-- Character Avatar -->
@@ -82,13 +83,87 @@
             </div>
           </div>
         </div>
+
+
+        <div id="chatContainer" class="container shadow mt-5 mb-3 p-3 position-relative collapse show">
+
+            <!-- Bouton de fermeture -->
+            <button type="button" class="btn p-0 position-absolute top-0 end-0 me-2 mt-2" aria-label="Close" data-bs-toggle="collapse" data-bs-target="#chatContainer">
+                <i class="fa-solid fa-hexagon-nodes-bolt"></i>
+            </button>
+
+            <!-- Navigation des onglets -->
+            <ul class="nav nav-tabs border-0 mb-3" id="chatTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active btn-sm" id="productivity-tab" data-bs-toggle="tab" data-bs-target="#productivity" type="button" role="tab" aria-controls="productivity" aria-selected="true">
+                        📈
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link btn-sm" id="general-tab" data-bs-toggle="tab" data-bs-target="#general" type="button" role="tab" aria-controls="general" aria-selected="false" tabindex="-1">
+                        💬
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link btn-sm" id="webdev-tab" data-bs-toggle="tab" data-bs-target="#webdev" type="button" role="tab" aria-controls="webdev" aria-selected="false" tabindex="-1">
+                        💻
+                    </button>
+                </li>
+            </ul>
+
+            <!-- Contenu des onglets -->
+            <div class="tab-content" id="chatTabsContent">
+                <!-- Productivité -->
+                <div class="tab-pane fade show active" id="productivity" role="tabpanel" aria-labelledby="productivity-tab">
+                    <a href="https://openai.com/chatgpt" target="_blank" class="d-block mb-2 text-decoration-none link-secondary rounded p-2">
+                        <strong>[ChatGPT]</strong> : "Votre assistant AI pour booster la productivité."
+                    </a>
+                    <a href="https://whimsical.com/" target="_blank" class="d-block mb-2 text-decoration-none link-secondary rounded p-2">
+                        <strong>[Whimsical Diagrams]</strong> : "Organisez visuellement vos idées."
+                    </a>
+                </div>
+
+                <!-- Général -->
+                <div class="tab-pane fade" id="general" role="tabpanel" aria-labelledby="general-tab">
+                    <a href="https://openai.com/dall-e-2/" target="_blank" class="d-block mb-2 text-decoration-none link-secondary rounded p-2">
+                        <strong>[DALL·E]</strong> : "Créez des images à partir de vos idées."
+                    </a>
+                    <a href="https://souschef.com/" target="_blank" class="d-block mb-2 text-decoration-none link-secondary rounded p-2">
+                        <strong>[Sous-Chef]</strong> : "Votre guide en cuisine."
+                    </a>
+                </div>
+
+                <!-- Développement Web -->
+                <div class="tab-pane fade" id="webdev" role="tabpanel" aria-labelledby="webdev-tab">
+                    <a href="https://github.com/features/copilot" target="_blank" class="d-block mb-2 text-decoration-none link-secondary rounded p-2">
+                        <strong>[Code Copilot]</strong> : "Optimisez votre code avec un copilote AI."
+                    </a>
+                    <a href="https://github.com/features/copilot" target="_blank" class="d-block mb-2 text-decoration-none link-secondary rounded p-2">
+                        <strong>[Screenshot-to-Code GPT]</strong> : "Transformez des captures en code instantanément."
+                    </a>
+                </div>
+            </div>
+
+            <!-- Champ de saisie de message -->
+            <div class="input-group mt-3">
+                <input type="text" class="form-control" placeholder="Message..." aria-label="Message">
+                <button class="btn btn-outline-secondary" type="button" id="microphone-button">
+                    <i class="fas fa-microphone"></i>
+                </button>
+                <button class="btn btn-primary" type="button" id="send-button">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+
+        </div>
+
       </div>
 
       <!-- Center Panel AI: Quick Décisions -->
-      <div class="col-md-2">
+      <div class="col-md-3">
         <div class="card mb-3">
           <div class="card-header text-center">
-            <h5><i class="fas fa-bolt me-2"></i>Quick Actions</h5>
+            <h5><i class="fas fa-fire me-2"></i>productivity Tools</h5>
           </div>
           <div class="card-body">
             <button class="btn action-btn w-100 mb-2"><i class="fas fa-sword"></i> Attack</button>
@@ -98,20 +173,58 @@
           </div>
         </div>
       </div>
-      <!-- Center Panel AI: Fast Answers -->
-      <div class="col-md-5">  <hr>
+      <!-- Center Panel > Objectifs = [Court Terme pour les buffs et debuffs] / [Livre des DécisionsPilot.html pour Long Terme] -->
+      <div class="col-md-3">
+
+        <div class="container p-3">
+          <div class="d-flex flex-wrap gap-3 justify-content-end">
+            <!-- Buff 1 -->
+            <div class="position-relative" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Augmente la force">
+              <div class="border d-flex align-items-center justify-content-center rounded-3" style="width: 50px; height: 50px;">
+                💪
+              </div>
+              <span class="position-absolute top-0 start-100 translate-middle badge bg-success">10s</span>
+            </div>
+
+            <!-- Buff 2 -->
+            <div class="position-relative" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Augmente l'agilité">
+              <div class="border d-flex align-items-center justify-content-center rounded-3" style="width: 50px; height: 50px;">
+                🏃
+              </div>
+              <span class="position-absolute top-0 start-100 translate-middle badge bg-primary">5</span>
+            </div>
+
+            <!-- Buff 3 -->
+            <div class="position-relative" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Réduit les dégâts">
+              <div class="border d-flex align-items-center justify-content-center rounded-3" style="width: 50px; height: 50px;">
+                🛡️
+              </div>
+              <span class="position-absolute top-0 start-100 translate-middle badge bg-warning">12s</span>
+            </div>
+
+            <!-- Debuff 1 -->
+            <div class="position-relative" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Réduit la vitesse">
+              <div class="border d-flex align-items-center justify-content-center rounded-3" style="width: 50px; height: 50px;">
+                🐌
+              </div>
+              <span class="position-absolute top-0 start-100 translate-middle badge bg-danger">8s</span>
+            </div>
+          </div>
+        </div>
+
+
       </div>
 
       <!-- Right Panel: Map and Quests -->
-      <div class="col-md-3">
+      <div class="col-md-4">
 
         <!-- Vues Notion Productivité avec Bootstrap Tabs -->
-        <div class="card mb-3">
-        <div class="card-body">
+        <div class="container-fluid mb-3">
+
             <!-- Navigation Tabs -->
             <ul class="nav nav-tabs" id="notionTabs" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="table-tab" data-bs-toggle="tab" data-bs-target="#table" type="button" role="tab" aria-controls="table" aria-selected="true">
+                <button class="nav-link" id="table-tab" data-bs-toggle="tab" data-bs-target="#table" type="button" role="tab" aria-controls="table" aria-selected="true">
                 <i class="fas fa-table"></i> Table
                 </button>
             </li>
@@ -121,7 +234,7 @@
                 </button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="calendar-tab" data-bs-toggle="tab" data-bs-target="#calendar" type="button" role="tab" aria-controls="calendar" aria-selected="false">
+                <button class="nav-link active" id="calendar-tab" data-bs-toggle="tab" data-bs-target="#calendar" type="button" role="tab" aria-controls="calendar" aria-selected="false">
                 <i class="fas fa-calendar-alt"></i> Calendrier
                 </button>
             </li>
@@ -144,19 +257,25 @@
 
             <!-- Tab Content -->
             <div class="tab-content mt-3" id="notionTabsContent">
-            <div class="tab-pane fade show active" id="table" role="tabpanel" aria-labelledby="table-tab">
-                <!-- Contenu de la Vue Table -->
-                <h5>Vue Table</h5>
+            <div class="tab-pane fade" id="table" role="tabpanel" aria-labelledby="table-tab">
+                <!-- Contenu vide de la Vue Table -->
+
             </div>
             <div class="tab-pane fade" id="kanban" role="tabpanel" aria-labelledby="kanban-tab">
                 <!-- Contenu de la Vue Tableau Kanban -->
                 <h5>Vue Grille Cartes</h5>
                 <iframe src="https://www.google.com" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
-            <div class="tab-pane fade" id="calendar" role="tabpanel" aria-labelledby="calendar-tab">
+            <div class="tab-pane fade show active" id="calendar" role="tabpanel" aria-labelledby="calendar-tab">
                 <!-- Contenu de la Vue Calendrier -->
-                <h5>Vue Calendrier</h5>
-                <iframe src="https://www.google.com" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <div class="embed-responsive embed-responsive-16by9 rounded-2 overflow-hidden">
+                    <iframe 
+                        src="https://calendar.google.com/calendar/embed?wkst=2&ctz=Europe%2FParis&showPrint=0&showTitle=0&showNav=0&showDate=0&showTabs=0&showTz=0&src=cGF0cmljay5hc3NpczE5MkBnbWFpbC5jb20&src=ZW4uZnJlbmNoI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%2300cc8b&color=%23F4511E" 
+                        style="border:0;" 
+                        class="w-100"
+                        frameborder="0" >
+                    </iframe>
+                </div>
             </div>
             <div class="tab-pane fade" id="timeline" role="tabpanel" aria-labelledby="timeline-tab">
                 <!-- Contenu de la Vue Chronologie -->
@@ -174,12 +293,12 @@
                 <iframe src="https://www.google.com" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
             </div>
-        </div>
+
         </div>
 
         <!-- Quests -->
-        <div class="card mt-3">
-          <div class="card-header bg-warning text-dark" data-bs-toggle="collapse" data-bs-target="#questCollapse" style="cursor: pointer;">
+        <div class="container-fluid mt-3">
+          <div class="card-header" data-bs-toggle="collapse" data-bs-target="#questCollapse" style="cursor: pointer;">
             <h5 class="mb-0"><i class="fas fa-book-dead me-2"></i>Quêtes</h5>
           </div>
           <div id="questCollapse" class="collapse show">
@@ -200,8 +319,8 @@
         </div>
 
         <!-- Quêtes Quotidiennes -->
-        <div class="card mt-3">
-          <div class="card-header bg-info text-dark" data-bs-toggle="collapse" data-bs-target="#dailyQuestCollapse" style="cursor: pointer;">
+        <div class="container-fluid mt-3">
+          <div data-bs-toggle="collapse" data-bs-target="#dailyQuestCollapse" style="cursor: pointer;">
             <h5 class="mb-0"><i class="fas fa-hourglass-half me-2"></i>Tâches Quotidiennes</h5>
           </div>
           <div id="dailyQuestCollapse" class="collapse show">
@@ -227,7 +346,59 @@
   </div>
 
   <!-- Footer -->
-  <footer class="footer text-center py-3 mt-4">
-    <p class="mb-0">© 2025 All Rights Reserved.</p>
+  <footer class="mt-5">
+    <div class="container">
+      <div class="row align-items-center">
+        
+        <!-- Left Section (Character, Inventory, etc.) -->
+        <div class="col-md-4 d-flex justify-content-start">
+          <button class="btn btn-outline-light btn-sm mx-1">
+            <i class="fas fa-user"></i> Character
+          </button>
+          <button class="btn btn-outline-light btn-sm mx-1">
+            <i class="fas fa-bag-shopping"></i> Inventory
+          </button>
+          <button class="btn btn-outline-light btn-sm mx-1">
+            <i class="fas fa-scroll"></i> Quests
+          </button>
+          <button class="btn btn-outline-light btn-sm mx-1">
+            <i class="fas fa-map"></i> Map
+          </button>
+        </div>
+
+        <!-- Center Section (Quick Bar) -->
+        <div class="col-md-4 d-flex justify-content-center">
+          <div class="btn-group" role="group" aria-label="Quick Bar">
+            <button class="btn btn-outline-light btn-sm">
+              <i class="fas fa-fire"></i>
+            </button>
+            <button class="btn btn-outline-light btn-sm">
+              <i class="fas fa-shield-alt"></i>
+            </button>
+            <button class="btn btn-outline-light btn-sm">
+              <i class="fas fa-magic"></i>
+            </button>
+            <button class="btn btn-outline-light btn-sm">
+              <i class="fas fa-paw"></i>
+            </button>
+            <button class="btn btn-outline-light btn-sm">
+              <i class="fas fa-heart"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Section (Settings, Logout, etc.) -->
+        <div class="col-md-4 d-flex justify-content-end">
+          <button class="btn btn-outline-light btn-sm mx-1">
+            <i class="fas fa-cogs"></i> Settings
+          </button>
+          <button class="btn btn-outline-light btn-sm mx-1">
+            <i class="fas fa-sign-out-alt"></i> Logout
+          </button>
+        </div>
+
+      </div>
+    </div>
   </footer>
+
 

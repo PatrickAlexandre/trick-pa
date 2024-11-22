@@ -1,0 +1,228 @@
+/* Général */
+body {
+  background: linear-gradient(180deg, #2a2a2e 0%, #1e1e22 100%);
+  color: #f8f9fa;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+.container, .container-fluid {
+  max-width: 1200px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #1c1c1f;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f8f9fa;
+}
+
+.navbar-brand i {
+  color: #ffc107;
+}
+
+.nav-link {
+  color: #f8f9fa;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #ffc107;
+}
+
+.nav-link.active {
+  color: #ffc107;
+  font-weight: bold;
+}
+
+.btn-outline-warning {
+  border-color: #ffc107;
+  color: #ffc107;
+}
+
+.btn-outline-warning:hover {
+  background-color: #ffc107;
+  color: #1c1c1f;
+}
+
+/* Left Panel (Character Panel) */
+.card {
+  background: #2e2e32;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card-body img {
+  border: 3px solid #ffc107;
+}
+
+.card-body p {
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.progress {
+  background-color: #3e3e44;
+}
+
+.progress-bar {
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 20px;
+}
+
+/* Chat Container */
+#chatContainer {
+  background: #2e2e32;
+  border-radius: 8px;
+}
+
+#chatContainer .nav-tabs .nav-link {
+  background: #1c1c1f;
+  color: #f8f9fa;
+  border-radius: 4px;
+}
+
+#chatContainer .nav-tabs .nav-link.active {
+  background: #ffc107;
+  color: #1c1c1f;
+}
+
+#chatContainer .input-group input {
+  background: #1c1c1f;
+  color: #f8f9fa;
+  border: 1px solid #3e3e44;
+  border-radius: 0.5rem;
+}
+
+#chatContainer .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+#chatContainer .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+#chatContainer .btn-outline-secondary {
+  border-color: #6c757d;
+  color: #6c757d;
+}
+
+#chatContainer .btn-outline-secondary:hover {
+  background-color: #6c757d;
+  color: #1c1c1f;
+}
+
+/* Center Panel (Actions) */
+.action-btn {
+  background: #1c1c1f;
+  border: 1px solid #ffc107;
+  color: #f8f9fa;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.action-btn:hover {
+  background: #ffc107;
+  color: #1c1c1f;
+  transform: scale(1.05);
+}
+
+/* Buffs and Debuffs */
+.container .position-relative {
+  background-color: #2e2e32;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  position: relative;
+}
+
+.container .badge {
+  font-size: 0.75rem;
+}
+
+/* Right Panel (Map and Quests) */
+.nav-tabs .nav-link {
+  background: #1c1c1f;
+  color: #f8f9fa;
+  border: none;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.nav-tabs .nav-link:hover {
+  background: #ffc107;
+  color: #1c1c1f;
+}
+
+.nav-tabs .nav-link.active {
+  background: #ffc107;
+  color: #1c1c1f;
+}
+
+.card-header {
+  background: #1c1c1f;
+  color: #ffc107;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background: #1c1c1f;
+  padding: 1rem 0;
+  border-top: 2px solid #ffc107;
+}
+
+footer .btn-outline-light {
+  border-color: #6c757d;
+  color: #6c757d;
+}
+
+footer .btn-outline-light:hover {
+  background: #ffc107;
+  color: #1c1c1f;
+}
+
+footer .btn-group .btn {
+  border-color: #6c757d;
+  color: #6c757d;
+}
+
+footer .btn-group .btn:hover {
+  background: #ffc107;
+  color: #1c1c1f;
+}
+
+/* Tooltips */
+[data-bs-toggle="tooltip"] {
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+
+  .action-btn {
+    font-size: 0.9rem;
+  }
+
+  .container .position-relative {
+    width: 50px;
+    height: 50px;
+  }
+}

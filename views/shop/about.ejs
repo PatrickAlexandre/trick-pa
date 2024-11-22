@@ -2,17 +2,10 @@
   </head>
 
 <body class="bg-light text-dark">
+  <%- include('../includes/BarreNavigation.ejs') %>
 
-  <!-- Offcanvas Navigation -->
-  <!-- Sidebar (Version Réduite pour PC) -->
-  <%- include('../Composants/nav.ejs') %>
-
-  <main>
-    <!-- Contenu Principal -->
-    <%- include('../Composants/Section.ejs') %>
-  </main>
-
-  <!-- Modal Mon Profil -->
-  <%- include('../Composants/Profil.ejs') %>
+    <div class="row bg-dark text-light p-2">
+      <%- include('../Composants/Elements/row.ejs') %>
+    </div>
 
     <%- include('../includes/end.ejs') %>
