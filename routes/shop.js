@@ -20,4 +20,6 @@ shopRouter.get('/orders', isAuthenticated, shopController.getOrders);
 shopRouter.get('/shipment', isAuthenticated, shopController.getShipment);
 shopRouter.post('/shipment', isAuthenticated, shopController.postShipment);
 
+shopRouter.get('/dashboard', shopController.getDashboard);
+
 module.exports = shopRouter;

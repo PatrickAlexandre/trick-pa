@@ -207,6 +207,13 @@ const postShipment = (req, res, next) => {
     });
 };
 
+const getDashboard = (req, res, next) => {
+  res.render('AdminToolkit/dashboard', {
+    pageTitle: 'Tableau de Bord',
+    path: '/dashboard',
+  });
+};
+
 module.exports = {
   getProducts,
   getProduct,
@@ -221,5 +228,6 @@ module.exports = {
   getContact,
   getMyPage,
   getShipment,
-  postShipment
+  postShipment,
+  getDashboard
 };
