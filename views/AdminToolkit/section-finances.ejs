@@ -1,0 +1,22 @@
+<!-- Section Finances -->
+<div id="finances" class="section">
+    <h2>Gestion Financière</h2>
+    <form id="finance-form">
+        <div class="form-group">
+            <label for="income">Revenus:</label>
+            <input type="number" id="income" placeholder="Exemple : 5000 €">
+        </div>
+        <div class="form-group">
+            <label for="expenses">Dépenses:</label>
+            <input type="number" id="expenses" placeholder="Exemple : 3000 €">
+        </div>
+        <div class="form-group">
+            <label for="savings-rate">Épargne (en %):</label>
+            <input type="range" id="savings-rate" min="0" max="100" value="20" oninput="updateSavingsRate(this.value)">
+        </div>
+        <output id="savings-output">Taux d'épargne : 20%</output>
+        <output id="finance-analysis">Analyse : 0 €</output>
+        <button type="button" onclick="calculateFinances()">Calculer</button>
+    </form>
+    <button onclick="backToMenu()">Retour</button>
+</div>

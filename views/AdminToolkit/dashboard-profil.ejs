@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableau de Bord</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #240046, #3f37c9, #00bbf9, #90e0ef);
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      text-align: center;
+      padding: 20px;
+      font-family: 'Orbitron', sans-serif;
+    }
+    nav button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      background: #00bbf9;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    nav button:hover {
+      background: #3f37c9;
+    }
+    .screen {
+      display: none;
+      padding: 20px;
+    }
+    .screen.active {
+      display: block;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      max-width: 600px;
+      margin: 20px auto;
+      color: black;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      justify-items: center;
+      margin-top: 20px;
+    }
+    .grid-item i {
+      font-size: 40px;
+      margin-bottom: 10px;
+      color: #3f37c9;
+    }
+    .grid-item span {
+      text-align: center;
+      font-size: 14px;
+      color: black;
+    }
+    form label {
+      display: block;
+      margin: 10px 0;
+    }
+    form input, form select {
+      padding: 5px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: none;
+    }
+    output {
+      display: block;
+      margin-top: 20px;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <header class="header">
+      <h1>Tableau de Bord</h1>
+      <nav>
+        <button onclick="showScreen('bienvenue')">Bienvenue</button>
+        <button onclick="showScreen('sante')">Santé</button>
+        <button onclick="showScreen('finances')">Finances</button>
+        <button onclick="showScreen('routine')">Routine Matinale</button>
+        <button onclick="showScreen('modifierProfil')">Modifier mon Profil</button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Section Bienvenue -->
+      <section id="bienvenue" class="screen">
+        <div class="welcome-text">
+          <h2>Bienvenue sur votre Tableau de Bord</h2>
+          <p>Notre vision : Vous permettre d’atteindre votre plein potentiel grâce à une gestion optimale de votre santé, de vos finances, et de votre routine quotidienne.</p>
+          <p>Notre mission : Vous fournir des outils modernes et intuitifs pour améliorer votre productivité, réduire le stress, et maximiser vos résultats.</p>
+          <p>Ce que nous proposons :</p>
+          <ul style="list-style-type: none; padding: 0;">
+            <li>Des calculs précis pour gérer votre santé et vos besoins caloriques.</li>
+            <li>Une analyse claire de vos finances pour mieux planifier vos objectifs.</li>
+            <li>Une routine matinale structurée pour démarrer chaque journée avec succès.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Section Santé -->
+      <section id="sante" class="screen">
+        <h2>Santé</h2>
+        <output id="dejResult">Veuillez modifier votre profil pour voir votre DEJ.</output>
+      </section>
+
+      <!-- Section Finances -->
+      <section id="finances" class="screen">
+        <h2>Finances</h2>
+        <output id="financeResult">Veuillez modifier votre profil pour voir l'analyse de vos finances.</output>
+      </section>
+
+      <!-- Section Routine Matinale -->
+      <section id="routine" class="screen">
+        <h2>Routine Matinale</h2>
+        <div class="card">
+          <div class="grid">
+            <div class="grid-item">
+              <i class="fas fa-sun"></i>
+              <span>Réveil immédiat</span>
+            </div>
+            <div class="grid-item">
+              <i class="fas fa-praying-hands"></i>
+              <span>Méditation</span>
+            </div>
+            <div class="grid-item">
+              <i class="fas fa-running"></i>
+              <span>Cardio rapide</span>
+            </div>
+            <div class="grid-item">
+              <i class="fas fa-shower"></i>
+              <span>Douche froide</span>
+            </div>
+            <div class="grid-item">
+              <i class="fas fa-utensils"></i>
+              <span>Petit-déjeuner</span>
+            </div>
+            <div class="grid-item">
+              <i class="fas fa-list"></i>
+              <span>Fixer 3 objectifs</span>
+            </div>
+            <div class="grid-item">
+              <i class="fas fa-book"></i>
+              <span>Lecture</span>
+            </div>
+            <div class="grid-item">
+              <i class="fas fa-dumbbell"></i>
+              <span>Exercice</span>
+            </div>
+            <div class="grid-item">
+              <i class="fas fa-coffee"></i>
+              <span>Boire un café</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Modifier Profil -->
+      <section id="modifierProfil" class="screen">
+        <h2>Modifier mon Profil</h2>
+        <form id="profilForm">
+          <label>Poids (kg): <input type="number" id="poids" required></label>
+          <label>Taille (cm): <input type="number" id="taille" required></label>
+          <label>Âge: <input type="number" id="age" required></label>
+          <label>Niveau d'activité:
+            <select id="activite">
+              <option value="1.2">Sédentaire</option>
+              <option value="1.375">Légère</option>
+              <option value="1.55">Modérée</option>
+              <option value="1.725">Active</option>
+              <option value="1.9">Très active</option>
+            </select>
+          </label>
+          <label>Revenus: <input type="number" id="revenus" required></label>
+          <label>Dépenses: <input type="number" id="depenses" required></label>
+          <label>Taux d'épargne:
+            <input type="range" id="epargne" min="0" max="50" step="1" oninput="updateEpargneValue(this.value)">
+            <span id="epargneValue">25%</span>
+          </label>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      showScreen("bienvenue");
+      setupProfileListeners();
+    });
+
+    function showScreen(screenId) {
+      document.querySelectorAll(".screen").forEach(screen => {
+        screen.classList.remove("active");
+      });
+      document.getElementById(screenId).classList.add("active");
+    }
+
+    function updateEpargneValue(value) {
+      document.getElementById("epargneValue").textContent = `${value}%`;
+    }
+
+    function setupProfileListeners() {
+      const inputs = document.querySelectorAll("#profilForm input, #profilForm select");
+      inputs.forEach(input => {
+        input.addEventListener("input", updateResults);
+      });
+    }
+
+    function updateResults() {
+      const poids = parseFloat(document.getElementById("poids").value) || 0;
+      const taille = parseFloat(document.getElementById("taille").value) || 0;
+      const age = parseInt(document.getElementById("age").value) || 0;
+      const activite = parseFloat(document.getElementById("activite").value) || 1.2;
+      const revenus = parseFloat(document.getElementById("revenus").value) || 0;
+      const depenses = parseFloat(document.getElementById("depenses").value) || 0;
+      const epargne = parseFloat(document.getElementById("epargne").value) || 25;
+
+      // Calcul DEJ
+      if (poids && taille && age) {
+        const dej = (10 * poids) + (6.25 * taille) - (5 * age) + 5;
+        const dejFinal = dej * activite;
+        document.getElementById("dejResult").textContent = `Votre DEJ est ${dejFinal.toFixed(2)} kcal.`;
+      } else {
+        document.getElementById("dejResult").textContent = "Veuillez remplir tous les champs pour calculer votre DEJ.";
+      }
+
+      // Calcul Finances
+      const montantEpargne = (revenus * epargne) / 100;
+      const solde = montantEpargne - depenses;
+
+      if (revenus || depenses) {
+        const message = solde >= 0
+          ? `Félicitations ! Vous avez un solde positif de ${solde.toFixed(2)} €.`
+          : `Attention ! Vous êtes en déficit de ${Math.abs(solde).toFixed(2)} €.`;
+        document.getElementById("financeResult").textContent = message;
+      } else {
+        document.getElementById("financeResult").textContent = "Veuillez remplir vos revenus et dépenses.";
+      }
+    }
+  </script>
+</body>
+</html>

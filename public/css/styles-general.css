@@ -1,0 +1,44 @@
+@import url('https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;500&display=swap');
+
+/* styles-general.css */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #240046, #3f37c9, #00bbf9, #90e0ef);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#app {
+    text-align: center;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+h1, h2 {
+    font-family: 'Orbitron', sans-serif;
+}
+
+button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    padding: 15px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    background: linear-gradient(135deg, #6c63ff, #1e90ff);
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #5b5adb, #187bd6);
+    transform: scale(1.05);
+}

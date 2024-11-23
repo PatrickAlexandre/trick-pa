@@ -1,20 +1,45 @@
-<%- include('../includes/head.ejs') %>
-  </head>
+<!DOCTYPE html>
+<html lang="fr">
 
-  <body>
-    <%- include('../includes/navigation.ejs') %>
-    <main>
-      <div class="uk-section uk-section-default">
-        <div class="uk-container uk-container-medium">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-          <article class="uk-article" style="color: #000;">
-            <h1 class="uk-article-title ui-card-title">Contact Us</h1>
-            <p class="uk-text-large uk-text-bold">Phone</p>
-            <p class="uk-text-small uk-text">+47 999 99 999</p>
-            <p class="uk-text-large uk-text-bold">Email</p>
-            <p class="uk-text-small uk-text">contact@mywebshop.com</p>
-          </article>
+    <title>Mon Interface Immersive</title>
+    <link rel="stylesheet" href="css/styles-general.css">
+    <link rel="stylesheet" href="css/styles-sections.css">
+</head>
+
+<body>
+    <div id="app">
+        <h1>Mon Interface Immersive</h1>
+        <p>Explorez des outils futuristes pour améliorer votre santé, finances et productivité !</p>
+
+        <div id="menu">
+            <button onclick="showScreen('health')"><i class="fa-solid fa-heartbeat"></i> Santé</button>
+            <button onclick="showScreen('finances')"><i class="fa-solid fa-wallet"></i> Finances</button>
+            <button onclick="showScreen('routine')"><i class="fa-solid fa-clock"></i> Routine Matinale</button>
         </div>
-      </div>
-    </main>
-    <%- include('../includes/end.ejs') %>
+
+        <!-- Section Santé -->
+        <%- include('section-health.ejs') %>
+
+        <!-- Section Finances -->
+        <%- include('section-finances.ejs') %>
+
+        <!-- Section Routine Matinale -->
+        <%- include('section-routine.ejs') %>
+
+        <!-- Section Productivité -->
+
+
+        <!-- Section Profil -->
+
+
+    </div>
+
+    <script src="js/scripts-general.js"></script>
+    <script src="js/scripts-functions.js"></script>
+</body>
+
+</html>
