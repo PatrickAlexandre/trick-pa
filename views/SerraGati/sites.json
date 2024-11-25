@@ -1,0 +1,32 @@
+[
+    {
+        "nom": "Crèche Croque la vie",
+        "categorie": "Crèches/Écoles",
+        "derniere_intervention": "Non défini"
+    },
+    {
+        "nom": "Parc de la fête",
+        "categorie": "Parcs et Jardins",
+        "derniere_intervention": "Non défini"
+    },
+    {
+        "nom": "Parc Genevoix",
+        "categorie": "Parcs et Jardins",
+        "derniere_intervention": "Non défini"
+    },
+    {
+        "nom": "Parc Léo Lagrange",
+        "categorie": "Parcs et Jardins",
+        "derniere_intervention": "Non défini"
+    },
+    {
+        "nom": "Rond-point Grétry",
+        "categorie": "Giratoires",
+        "derniere_intervention": "Non défini"
+    },
+    {
+        "nom": "Théâtre J. Brel",
+        "categorie": "Équipements Publics",
+        "derniere_intervention": "Non défini"
+    }
+]

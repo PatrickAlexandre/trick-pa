@@ -214,6 +214,13 @@ const getDashboard = (req, res, next) => {
   });
 };
 
+const getSerraGati = (req, res, next) => {
+  res.render('SerraGati/serre', {
+    pageTitle: 'la Serre',
+    path: '/serre',
+  });
+};
+
 module.exports = {
   getProducts,
   getProduct,
@@ -229,5 +236,6 @@ module.exports = {
   getMyPage,
   getShipment,
   postShipment,
-  getDashboard
+  getDashboard,
+  getSerraGati
 };

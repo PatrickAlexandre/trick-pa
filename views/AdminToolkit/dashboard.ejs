@@ -19,22 +19,17 @@
             <button onclick="showScreen('health')"><i class="fa-solid fa-heartbeat"></i> Santé</button>
             <button onclick="showScreen('finances')"><i class="fa-solid fa-wallet"></i> Finances</button>
             <button onclick="showScreen('routine')"><i class="fa-solid fa-clock"></i> Routine Matinale</button>
+            <button onclick="showScreen('profile')"><i class="fa-solid fa-user"></i> Profil</button>
         </div>
 
-        <!-- Section Santé -->
         <%- include('section-health.ejs') %>
-
-        <!-- Section Finances -->
         <%- include('section-finances.ejs') %>
-
-        <!-- Section Routine Matinale -->
         <%- include('section-routine.ejs') %>
-
         <!-- Section Productivité -->
-
-
         <!-- Section Profil -->
-
+        <div id="profile" class="section">
+            <p>Hello Pat !</p>
+        </div>
 
     </div>
 

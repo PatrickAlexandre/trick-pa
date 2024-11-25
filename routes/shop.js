@@ -21,5 +21,6 @@ shopRouter.get('/shipment', isAuthenticated, shopController.getShipment);
 shopRouter.post('/shipment', isAuthenticated, shopController.postShipment);
 
 shopRouter.get('/dashboard', shopController.getDashboard);
+shopRouter.get('/serre', shopController.getSerraGati);
 
 module.exports = shopRouter;
